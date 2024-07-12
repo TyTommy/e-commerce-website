@@ -1,0 +1,48 @@
+.shopNow {
+    width: 100%;
+    margin-bottom: 240px;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        margin: 0 auto;
+        max-width: 1900px;
+        background-color: var(--primary-color);
+    }
+
+    &__content > h2{
+        max-width: 570px;
+        color: #FFFFFF;
+        font-size: 55px;
+        font-weight: 500;
+        line-height: 82px;
+        padding-bottom: 20px;
+    }
+
+    &__text {
+        max-width: 592px;
+        color: #FFFFFF;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        padding-bottom: 12px;
+    }
+
+    &__btn {
+        width: 100px;
+        height: 38px;
+        border: none;
+        color: #FFFFFF;
+        border-bottom: #FFFFFF 3px solid;
+        background-color: transparent;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 30px;
+        cursor: pointer;
+        font-family: 'Poppins', sans-serif;
+    }
+
+}

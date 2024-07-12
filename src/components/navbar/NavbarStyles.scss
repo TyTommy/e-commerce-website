@@ -1,0 +1,31 @@
+.navbar {
+    width: 100%;
+    min-height: 110px;
+    margin-top: 30px;
+
+    &__menu-line {
+        padding-bottom: 15px;
+        border-bottom: 1px solid gray;
+        opacity: 0.2;
+    }
+
+    select {
+        font-size: 20px;
+        border: none;
+        margin-left: 100px;
+    }
+
+    &__menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 30px 100px;
+    }
+
+    &__profile > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+    }
+}
