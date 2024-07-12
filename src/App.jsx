@@ -1,23 +1,26 @@
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
-import Hero from "./components/hero/Hero";
-import AllProducts from "./components/allProducts/AllProducts";
-import ShopNow from "./components/shopNow/ShopNow";
-import OurServices from "./components/ourServices/OurServices";
-import TopRatedProducts from "./components/topRatedProducts/TopRatedProducts";
 import Footer from "./components/footer/Footer";
+import ProductPage from "./pages/ProductPage";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
-      <Hero />
-      <AllProducts />
-      <ShopNow />
-      <OurServices />
-      <TopRatedProducts />
+      <Routes>
+        <Route
+          path="/"
+          element={<Home />}
+        ></Route>
+        <Route
+          path="/product/:productId"
+          element={<ProductPage />}
+        ></Route>
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 
