@@ -5,8 +5,11 @@ import { Link } from "react-router-dom";
 import { CheckoutContext } from "../../context/CheckoutContext";
 import "./NavbarStyles.scss";
 import Logo from "../../assets/nav-logo.png";
+import { useTranslation } from "react-i18next";
+
 const Navbar = () => {
   const { cart } = useContext(CheckoutContext);
+  const { t } = useTranslation();
 
   const cartCounter = cart.reduce((acc, item) => acc + item.quantity, 0);
 
@@ -22,7 +25,8 @@ const Navbar = () => {
         <div className="navbar__menu">
           <div className="navbar__profile">
             <Link to="/login">
-              <CgProfile style={{ width: "22px", height: "22px" }} /> My profile
+              <CgProfile style={{ width: "22px", height: "22px" }} />
+              {t("myProfile")}
             </Link>
           </div>
           <Link to="/">
